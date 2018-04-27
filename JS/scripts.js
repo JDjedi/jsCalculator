@@ -94,7 +94,7 @@ function userSelectEqual() {
 				arithmaticMaker(inputArray);
 				return operators
 			} else {
-				inputArray = inputArray;
+				// inputArray = inputArray;
 			}
 		}
 	} else {
@@ -110,18 +110,23 @@ function arithmaticMaker (arithmaticContainer) {
 		var errorMessage = "Error";
 		document.getElementById('screen-output').innerHTML = errorMessage;
 	} else {
+
 		if(arithmaticContainer.match(/[+]/)) {
 			arithmaticContainer = arithmaticContainer.split('+');
 			add(arithmaticContainer[0], arithmaticContainer[1]);
+
 		} else if(arithmaticContainer.match(/[-]/)){
 			arithmaticContainer = arithmaticContainer.split('-');
 			subtract(arithmaticContainer[0], arithmaticContainer[1]);
+
 		} else if(arithmaticContainer.match(/[/]/)){
 			arithmaticContainer = arithmaticContainer.split('/');
-			divide(arithmaticContainer[0], arithmaticContainer[1]); 
+			divide(arithmaticContainer[0], arithmaticContainer[1]);
+
 		} else if(arithmaticContainer.match(/[*]/)){
 			arithmaticContainer = arithmaticContainer.split('*');
 			multiply(arithmaticContainer[0], arithmaticContainer[1]);
+			
 		} else {
 			console.log("Error");
 		}
